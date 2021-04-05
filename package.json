@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "name": "@typoerr/template-sandbox",
+  "description": "",
+  "version": "0.0.1",
+  "author": "typoerr",
+  "license": "MIT",
+  "homepage": "https://github.com/typoerr/template-sandbox#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typoerr/template-sandbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/typoerr/template-sandbox/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "@types/sinon": "^9.0.11",
+    "@typoerr/eslint-config": "^0.0.42",
+    "ava": "^3.15.0",
+    "eslint": "^7.23.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "sinon": "^10.0.0",
+    "ts-node": "^9.1.1",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.2.3"
+  },
+  "scripts": {
+    "compile": "run-p compile:*",
+    "compile:esm": "tsc --outDir dist/esm --module esnext",
+    "compile:cjs": "tsc --outDir dist/cjs --module commonjs",
+    "clean": "run-p clean:**",
+    "clean:dist": "rimraf dist",
+    "lint": "eslint src/**/*.ts test/**/*.ts",
+    "type-check": "tsc --noEmit",
+    "test": "ava --config ./ava.config.js"
+  }
+}
