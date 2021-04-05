@@ -6,7 +6,9 @@
     "**/*bundle.*/**": true,
     "**/node_modules/**": true,
     "**/.cache/**": true,
-    ".rts2*": true
+    "**/yarn.lock": true,
+    "**/package-lock.json": true,
+    "**/.gitkeep": true,
   },
   // disable editor format for prettier
   "typescript.format.enable": false,
