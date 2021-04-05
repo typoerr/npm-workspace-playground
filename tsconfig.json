@@ -6,6 +6,13 @@
     "lib": [
       "es2019"
     ],
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "packages/*"
+      ]
+    },
     "declaration": true,
     "outDir": "dist",
     "sourceMap": true,
@@ -24,8 +31,7 @@
     ]
   },
   "include": [
-    "src/**/*.ts",
-    "test/**/*.ts"
+    "packages/**/*.ts",
   ],
   "exclude": [
     "node_modules"
